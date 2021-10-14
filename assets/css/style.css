@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pathway+Gothic+One&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: Open Sans, sans-serif;
+}
+
+h1 {
+    font-family: Pathway Gothic One, sans-serif;
+    background-color: #fff;
+    text-align: center;
+    color: #4a536b;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+/* Code grounded on a Stackoverflow website answer to a question by user4639281 https://stackoverflow.com/questions/30418787/how-do-i-center-a-responsive-navigation-bar-menu-with-css-and-html-only" */
+
+
+#menuBackground {
+
+    background:#4a536b;
+    width:100%;
+    height:50px;
+    text-align: center;
+}
+
+#menuContainer {
+    text-align: center;
+}
+/*Strip the ul of padding and list styling*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+    display: block;
+    min-width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: Pathway Gothic One, sans-serif;
+    letter-spacing: 4px;
+    font-weight: 300;
+    color: #ff9a8d;
+    background: #4a536b;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+    background: #aed6dc;
+
+}
+
+/*Style for dropdown links*/
+li:hover ul a:hover {
+    background: #77c593; 
+    color: #aed6dc;
+    height: 40px;
+    line-height: 40px;
+    
+}
+
+  
+
+/*Hover state for dropdown links*/
+
+li:hover ul a:hover {
+    background: #4a536b;
+    color: #aed6dc;  
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+    position: absolute;
+    display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+    display: block;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover+.hidden,
+.hidden:hover {
+    display: block
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #ff9a8d;
+    background: #4a536b;
+    text-align: center;
+    padding: 16px 0;
+    display: none;
+    width: 100%;
+}
+
+/*Hide checkbox*/
+input[type=checkbox] {
+    display: none
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked~#menu {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px) {
+
+    /*Make dropdown links appear inline*/
+    ul {
+        position: static;
+        display: none;
+        white-space: initial;
+    }
+
+    /*Create vertical spacing*/
+    li {
+        border: 1px solid #ff9a8d;
+       
+    }
+
+    /*Make all menu links full width*/
+    ul li,
+    li a {
+        width: 100%;
+    }
+
+    /*Display 'show menu' link*/
+    .show-menu {
+        display: block;
+        
+    }
+}
+
+/* hero-image and cover-text */
+
+
+#hero-image {
+
+    height: 600px;
+    width: 100%;
+    background: url('../images/mother-daughter3.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto; 
+    overflow: hidden;   
+}
+
+
+    @media screen and (max-width: 480px) {
+    #hero-image {
+        width: 100% auto;
+        height: auto;
+        padding-top: 43%;
+        background-size: 100% auto;
+        }
+    }
+
