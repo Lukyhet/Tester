@@ -16,26 +16,32 @@ h1 {
     font-size: 34px;
 }
 
-/* Code grounded on a Stackoverflow website answer to a question by user4639281 https://stackoverflow.com/questions/30418787/how-do-i-center-a-responsive-navigation-bar-menu-with-css-and-html-only" */
+.logo {
+    cursor: pointer;
+}
+
+/* Menu styling based on a Stackoverflow website answer to a question by user4639281 https://stackoverflow.com/questions/30418787/how-do-i-center-a-responsive-navigation-bar-menu-with-css-and-html-only" */
 
 
 #menuBackground {
 
-    background:#4a536b;
-    width:100%;
-    height:50px;
+    background: #4a536b;
+    width: 100%;
+    height: 50px;
     text-align: center;
 }
 
 #menuContainer {
     text-align: center;
 }
+
 /*Strip the ul of padding and list styling*/
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-size: 0;
 }
 
 /*Create a horizontal list with spacing*/
@@ -43,6 +49,8 @@ li {
     display: inline-block;
     vertical-align: top;
     margin-right: 1px;
+    font-size: 16px;
+
 }
 
 /*Style for menu links*/
@@ -68,21 +76,23 @@ li:hover a {
 }
 
 /*Style for dropdown links*/
+
+
 li:hover ul a:hover {
-    background: #77c593; 
+    background: #77c593;
     color: #aed6dc;
     height: 40px;
     line-height: 40px;
-    
+
 }
 
-  
+
 
 /*Hover state for dropdown links*/
 
 li:hover ul a:hover {
     background: #4a536b;
-    color: #aed6dc;  
+    color: #aed6dc;
 }
 
 /*Hide dropdown links until they are needed*/
@@ -94,6 +104,7 @@ li ul {
 /*Make dropdown links vertical*/
 li ul li {
     display: block;
+    border: 0;
 }
 
 /*Prevent text wrapping*/
@@ -132,6 +143,32 @@ input[type=checkbox]:checked~#menu {
     margin: 0 auto;
 }
 
+p {
+    padding: 16px;
+}
+
+/* footer */
+
+#social-networks .sociali {
+    display: inline-block;
+    
+}
+
+
+#social-networks li>a {
+    display: inline-block;
+    min-width: none;
+    height: auto;
+    line-height: 1.2em;
+    font-size: 16px;
+}
+
+#social-networks {
+    text-align: center;
+
+
+}
+
 
 
 /*Responsive Styles*/
@@ -144,11 +181,6 @@ input[type=checkbox]:checked~#menu {
         white-space: initial;
     }
 
-    /*Create vertical spacing*/
-    li {
-        border: 1px solid #ff9a8d;
-       
-    }
 
     /*Make all menu links full width*/
     ul li,
@@ -159,7 +191,7 @@ input[type=checkbox]:checked~#menu {
     /*Display 'show menu' link*/
     .show-menu {
         display: block;
-        
+
     }
 }
 
@@ -173,17 +205,16 @@ input[type=checkbox]:checked~#menu {
     background: url('../images/mother-daughter3.jpeg');
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100% auto; 
-    overflow: hidden;   
+    background-size: 100% auto;
+    overflow: hidden;
 }
 
 
-    @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #hero-image {
         width: 100% auto;
         height: auto;
         padding-top: 43%;
         background-size: 100% auto;
-        }
     }
-
+}
