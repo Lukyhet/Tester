@@ -149,23 +149,33 @@ p {
 
 /* footer */
 
-#social-networks .sociali {
-    display: inline-block;
-    
-}
 
 
-#social-networks li>a {
-    display: inline-block;
-    min-width: none;
-    height: auto;
-    line-height: 1.2em;
-    font-size: 16px;
+.pseudolink { 
+   color #4a536b; 
+   text-decoration:underline; 
+   cursor:pointer; 
+   }
+
+
+footer {
+    height: 150px;
 }
 
 #social-networks {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 
+#social-networks li{
+    text-align: center;
+   }
+
+#social-networks i {
+    font-size: 200%;
+    margin: 1%;
+    padding: 16px;
+    color: #4a536b;
 
 }
 
